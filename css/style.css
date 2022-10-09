@@ -7,6 +7,27 @@ body{
     background-attachment: fixed;
     background-size: cover;
 }
+hr{
+    border-top: 8px dashed;
+}
+
+.icone:hover{
+    image-orientation: 5deg;
+}
+
+.icone{
+    margin-top: 2%;
+    border: none;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.icone:hover {
+    transform: scale(1.2);
+}
 
 .container-text{
     margin: 5%;
