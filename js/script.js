@@ -150,3 +150,34 @@ function element() {
     document.getElementById("result").innerHTML = (result);
     console.log(element1,element2)
 }
+
+var a = 1;
+var b = 1;
+var id1 = "naveo";
+var id2 = "angel";
+var password1 = "1234"
+var password2 = "popeye89"
+
+function login() {
+    a = document.getElementById("userId").value;
+    b = document.getElementById("userPassword").value;
+    if (a == id1){
+        if (b == password1){
+            document.getElementById("reponseLogin").innerHTML = ("Connecté");
+        }
+        else {
+            document.getElementById("reponseLogin").innerHTML = ("Mot de passe incorrect");
+        }
+    }
+    else if (a == id2){
+        if (b == password2){
+            document.getElementById("reponseLogin").innerHTML = ("Connecté");
+        }
+        else{
+            document.getElementById("reponseLogin").innerHTML = ("Mot de passe incorrect");
+        }
+    }
+    else{
+        document.getElementById("reponseLogin").innerHTML = ("Nom d'utilisateur incorrect");
+    }
+}
