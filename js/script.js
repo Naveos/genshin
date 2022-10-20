@@ -155,15 +155,29 @@ var a = 1;
 var b = 1;
 var id1 = "naveo";
 var id2 = "angel";
+var id3 = "Sam"
 var password1 = "1234"
 var password2 = "popeye89"
+var password3 = "azertyuiop"
 
 function login() {
     a = document.getElementById("userId").value;
     b = document.getElementById("userPassword").value;
     if (a == id1){
         if (b == password1){
-            document.getElementById("reponseLogin").innerHTML = ("Connecté");
+            document.getElementById("reponseLogin").innerHTML = ("Redirection dans 3");
+            setTimeout(() => {
+                document.getElementById("reponseLogin").innerHTML = ("Redirection dans 2");
+            }, 1000);
+            setTimeout(() => {
+                document.getElementById("reponseLogin").innerHTML = ("Redirection dans 1");
+            }, 2000);
+            setTimeout(() => {
+                document.getElementById("reponseLogin").innerHTML = ("Redirection...");
+            }, 3000);
+            setTimeout(() => {
+                document.location.href="../html/utilisateurs/naveo.html";
+            }, 3000);
         }
         else {
             document.getElementById("reponseLogin").innerHTML = ("Mot de passe incorrect");
@@ -171,7 +185,39 @@ function login() {
     }
     else if (a == id2){
         if (b == password2){
-            document.getElementById("reponseLogin").innerHTML = ("Connecté");
+            document.getElementById("reponseLogin").innerHTML = ("Redirection dans 3");
+            setTimeout(() => {
+                document.getElementById("reponseLogin").innerHTML = ("Redirection dans 2");
+            }, 1000);
+            setTimeout(() => {
+                document.getElementById("reponseLogin").innerHTML = ("Redirection dans 1");
+            }, 2000);
+            setTimeout(() => {
+                document.getElementById("reponseLogin").innerHTML = ("Redirection...");
+            }, 3000);
+            setTimeout(() => {
+                document.location.href="../html/utilisateurs/angel.html";
+            }, 3000);
+        }
+        else{
+            document.getElementById("reponseLogin").innerHTML = ("Mot de passe incorrect");
+        }
+    }
+    else if (a == id3){
+        if (b == password3){
+            document.getElementById("reponseLogin").innerHTML = ("Redirection dans 3");
+            setTimeout(() => {
+                document.getElementById("reponseLogin").innerHTML = ("Redirection dans 2");
+            }, 1000);
+            setTimeout(() => {
+                document.getElementById("reponseLogin").innerHTML = ("Redirection dans 1");
+            }, 2000);
+            setTimeout(() => {
+                document.getElementById("reponseLogin").innerHTML = ("Redirection...");
+            }, 3000);
+            setTimeout(() => {
+                document.location.href="../html/utilisateurs/sam.html";
+            }, 3000);
         }
         else{
             document.getElementById("reponseLogin").innerHTML = ("Mot de passe incorrect");
@@ -181,3 +227,14 @@ function login() {
         document.getElementById("reponseLogin").innerHTML = ("Nom d'utilisateur incorrect");
     }
 }
+jQuery(function(){
+    $(function () {
+        $(window).scroll(function () { //Fonction appelée quand on descend la page
+            if ($(this).scrollTop() > 200 ) {  // Quand on est à 200pixels du haut de page,
+                $('#scrollUp').css('right','10px'); // Replace à 10pixels de la droite l'image
+            } else { 
+                $('#scrollUp').removeAttr( 'style' ); // Enlève les attributs CSS affectés par javascript
+            }
+        });
+    });
+});
