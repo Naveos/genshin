@@ -176,7 +176,7 @@ function login() {
                 document.getElementById("reponseLogin").innerHTML = ("Redirection...");
             }, 3000);
             setTimeout(() => {
-                document.location.href="../html/utilisateurs/naveo.html";
+                document.location.href="html/utilisateurs/naveo.html";
             }, 3000);
         }
         else {
@@ -196,7 +196,7 @@ function login() {
                 document.getElementById("reponseLogin").innerHTML = ("Redirection...");
             }, 3000);
             setTimeout(() => {
-                document.location.href="../html/utilisateurs/angel.html";
+                document.location.href="html/utilisateurs/angel.html";
             }, 3000);
         }
         else{
